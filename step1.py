@@ -12,4 +12,4 @@ data2 = pd.merge(data, data_veh, on = 'Num_Acc')
 data3 = pd.merge(data2, data_vict, on = 'Num_Acc')
 
 # Save the data
-data3.to_csv('data/data.csv', index=False)
+data3.to_csv('data/merged_data.csv', index=False)
