@@ -4,7 +4,7 @@ from sklearn.cluster import KMeans
 
 
 
-victime = pd.read_csv('step3/missing_values_deleted.csv')
+victime = pd.read_csv('step2/missing_values_deleted.csv', sep = ";")
 
 hrmn=pd.cut(victime['hrmn'],24,labels=[str(i) for i in range(0,24)])
 
@@ -29,4 +29,4 @@ clustering.fit(X_cluster)
 geo = pd.Series(clustering.labels_)
 victime['geo'] = geo
 
-victime.to_csv('time_encoding.csv.csv', index=False)
+victime.to_csv('step3/time_encoding.csv.csv', index=False)
